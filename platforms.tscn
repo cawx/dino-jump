@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://buxjah6pip8jx"]
+
+[ext_resource type="Texture2D" uid="uid://b4xu1102h7kdh" path="res://Assets/Platform_muld.png" id="1_1kqy5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5t8o"]
+size = Vector2(86, 9)
+
+[node name="Platform" type="StaticBody2D"]
+position = Vector2(0, 23)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_1kqy5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -17)
+shape = SubResource("RectangleShape2D_d5t8o")
+one_way_collision = true

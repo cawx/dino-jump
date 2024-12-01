@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxk4x658ro5ml"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_j1tfv"]
+[ext_resource type="Script" path="res://platform_generator.gd" id="2_qe3xg"]
+[ext_resource type="PackedScene" uid="uid://buxjah6pip8jx" path="res://platforms.tscn" id="3_be2a2"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_j1tfv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PlatformGenerator" type="Node2D" parent="."]
+script = ExtResource("2_qe3xg")
+platform_scene = ExtResource("3_be2a2")
+spawn_range = Vector2(0, 480)
